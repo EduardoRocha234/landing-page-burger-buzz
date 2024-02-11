@@ -6,7 +6,7 @@
 	--red: #c33130;
 	--red-second: #a42828;
 	--green: #00833e;
-	--green-second: #007436;
+	--green-second: #006a32;
 	--black: #212121;
 	--white: #fff;
 }
@@ -304,7 +304,6 @@ body {
 }
 
 .card-bgr {
-	/* margin-left: 2rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -451,7 +450,6 @@ body {
 .fourth-section {
 	position: relative;
 	background: #f1f1f1;
-	/* padding-top: 6rem; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -488,5 +486,174 @@ body {
 }
 
 .fourth-section-btn-mn:hover {
+	background-color: var(--green-second);
+}
+
+.fifth-section {
+	position: relative;
+	background: #f1f1f1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 6rem;
+}
+
+.fifth-section-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 70px;
+	margin-bottom: 2rem;
+}
+
+.fifth-section .menu-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.menu-buttons .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	height: 3rem;
+	padding: 10px 30px;
+	border-radius: 10px;
+	background-color: var(--white);
+	color: #464646;
+	transition: 0.3s;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.menu-buttons .button img {
+	transition: all 0.3s;
+}
+
+.menu-buttons .button i {
+	scale: 2;
+}
+
+.menu-buttons .button:hover {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+.dishes {
+	display: flex;
+	padding: 6rem;
+	gap: 1rem;
+	/* padding-bottom: 6px; */
+}
+
+.card-dishe {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	max-width: 18rem;
+	height: 25rem;
+	border-radius: 45px;
+	transition: 0.3s;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 20px;
+	background-color: #ffffff;
+}
+
+.card-dishe-img {
+	height: 7rem;
+}
+
+.card-dishe-img img {
+	/* position: absolute; */
+	width: 900px;
+	height: 900px;
+	scale: 0.2;
+	margin-top: -26.5rem;
+	/* border-radius: 50%; */
+	object-fit: fill;
+	transition: 0.3s;
+}
+
+/* .card-dishe-img img:hover {
+	scale: 0.75;
+} */
+
+.card-dishe-title {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	/* margin-top: -1.6rem; */
+}
+
+.card-dishe-title h6 {
+	align-self: flex-start;
+}
+
+.card-dishe-title i {
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+.liked {
+	color: var(--red);
+}
+
+.card-dishe-stars {
+	margin-top: 15px;
+	align-self: flex-start;
+}
+
+.star {
+	color: var(--yellow);
+}
+
+.card-dishe-description {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: justify;
+	margin-top: 2rem;
+}
+
+.card-dishe-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.card-dishe-footer .price {
+	font-weight: 700;
+	font-size: 20px;
+	color: var(--red);
+}
+
+.fifth-section-btn-mn {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	background-color: var(--green);
+	color: var(--white);
+	height: 24px;
+	outline: none;
+	border-radius: 10px;
+	padding: 23px 47px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+.fifth-section-btn-mn:hover {
 	background-color: var(--green-second);
 }

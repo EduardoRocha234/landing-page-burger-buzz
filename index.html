@@ -16,7 +16,7 @@
 		<!-- Js -->
 
 		<script
-			src="./js/index.js"
+			src="./src/index.js"
 			defer
 		></script>
 
@@ -275,9 +275,197 @@
 					</div>
 				</div>
 			</div>
-			<div class="fourth-section-btn-mn">
-				View our full MENU
+			<div class="fourth-section-btn-mn">View our full MENU</div>
+		</section>
+		<section class="fifth-section">
+			<div class="fifth-section-title">POPULAR DISHES</div>
+			<div>
+				<div class="menu-buttons">
+					<div
+						class="button"
+						onmouseover="changeIMG('svg_bg_1', 'burger-icon-white.svg')"
+						onmouseout="changeIMG('svg_bg_1', 'burger-icon-black.svg')"
+					>
+						<img
+							id="svg_bg_1"
+							src="./img/burger-icon-black.svg"
+						/>
+						BURGER
+					</div>
+					<div class="button">
+						<i class="bx bxs-pizza bx-rotate-270"></i>
+						PIZZA
+					</div>
+					<div class="button">
+						<i class="bx bxs-sushi"></i>
+						SUSHI
+					</div>
+					<div
+						class="button"
+						onmouseover="changeIMG('svg_burrito', 'burrito_white.svg')"
+						onmouseout="changeIMG('svg_burrito', 'burrito.svg')"
+					>
+						<img
+							id="svg_burrito"
+							src="./img/burrito.svg"
+						/>
+						BURRITO
+					</div>
+					<div
+						class="button"
+						onmouseover="changeIMG('svg_fast_food', 'fast_food_white.svg')"
+						onmouseout="changeIMG('svg_fast_food', 'fast_food.svg')"
+					>
+						<img
+							id="svg_fast_food"
+							src="./img/fast_food.svg"
+						/>
+						FAST FOOD
+					</div>
+					<div class="button">
+						<i class="bx bx-coffee"></i>
+						BEVERAGES
+					</div>
+					<div
+						class="button"
+						onmouseover="changeIMG('svg_salad', 'salad_white.svg')"
+						onmouseout="changeIMG('svg_salad', 'salad.svg')"
+					>
+						<img
+							id="svg_salad"
+							src="./img/salad.svg"
+						/>
+						SALATS
+					</div>
+				</div>
+				<div class="dishes">
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img src="./img/product_1.png" />
+						</div>
+						<div class="card-dishe-title">
+							<h6>DOUBLE-DOUBLE</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Indulge in our mouth-watering Signature Stacks - each layer packed
+							with bold flavors and textures that will leave you craving for
+							more!
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">9.58$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img src="./img/product_2.png" />
+						</div>
+						<div class="card-dishe-title">
+							<h6>SONIC BLAST</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Sunt autem aliquid mollitia et a. Et illum illo hic quisquam
+							voluptate. Facilis rem enim ducimus ad id. Harum quas…
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">7.28$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img src="./img/product_3.png" />
+						</div>
+						<div class="card-dishe-title">
+							<h6>WHOPPER BURGER KING</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Atque omnis nesciunt tempore et doloribus. Vel ut vel ut veniam
+							iusto excepturi omnis. Et velit omnis qui et sed.…
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">13.45$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img src="./img/product_4.png" />
+						</div>
+						<div class="card-dishe-title">
+							<h6>BIG MAC</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Velit voluptas consectetur omnis sed nihil aut. A quo officia et
+							alias omnis magni vel. Dolorum temporibus iure perspiciatis quo…
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">6.64$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="fifth-section-btn-mn">view all</div>
+		</section>
+		<section class="sixth-section">
+			
 		</section>
 	</body>
 </html>
