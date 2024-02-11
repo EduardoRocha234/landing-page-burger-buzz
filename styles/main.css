@@ -5,9 +5,11 @@
 	--yellow: #ffcc19;
 	--red: #c33130;
 	--red-second: #a42828;
+	--red-third: #d34343;
 	--green: #00833e;
 	--green-second: #006a32;
 	--black: #212121;
+	--black-second: #464646;
 	--white: #fff;
 }
 
@@ -497,6 +499,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding-top: 6rem;
+	padding-bottom: 6rem;
 }
 
 .fifth-section-title {
@@ -656,4 +659,236 @@ body {
 
 .fifth-section-btn-mn:hover {
 	background-color: var(--green-second);
+}
+
+.sixth-section {
+	position: relative;
+	background: var(--red-third);
+	display: flex;
+	/* flex-direction: column; */
+	max-height: 40rem;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5rem;
+	padding-top: -10rem;
+	height: 100vh;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.sixth-section-decor {
+	margin-top: -40rem;
+}
+
+.sixth-section-decor .burrito {
+	position: relative;
+	align-self: flex-start;
+}
+
+.sixth-section-decor .burrito-bg {
+	scale: 0.7;
+	position: absolute;
+	left: -3rem;
+}
+
+.sixth-section-decor .leaf-1 {
+	scale: 0.7;
+	/* align-self: flex-start;
+	margin-left: 5rem; */
+	position: absolute;
+	top: 7rem;
+	left: 3rem;
+}
+
+.sixth-section-decor .leaf-2 {
+	scale: 0.7;
+	/* align-self: flex-start;
+	margin-left: 5rem; */
+	position: absolute;
+	top: 10rem;
+	left: -3.6rem;
+}
+
+.sixth-section-decor .pizza-dec {
+	position: absolute;
+	bottom: 0.1rem;
+	left: 20rem;
+	scale: 0.9;
+}
+
+.sixth-section-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sixth-section-content h1 {
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 80px;
+	color: var(--yellow);
+}
+
+.sixth-section-content h2 {
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 90px;
+	color: var(--white);
+}
+
+.sixth-section-content h6 {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--white);
+	max-width: 24rem;
+	text-align: center;
+}
+
+#actualHour {
+	margin-top: 3rem;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 60px;
+	color: var(--white);
+}
+
+.day-desc {
+	display: flex;
+	gap: 46px;
+	margin-left: -9px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 19.2px;
+	color: var(--white);
+}
+
+.sixth-section .burrito-2 {
+	position: relative;
+}
+
+.sixth-section .burrito-2 img {
+	scale: 0.7;
+	margin-top: 15rem;
+	margin-right: -45rem;
+	margin-left: -45rem;
+	padding-left: 10rem;
+}
+
+.sixth-section .burrito-2 .sale {
+	scale: 0.7;
+	position: absolute;
+	top: 1rem;
+	left: 20rem;
+}
+
+.sixth-section .tomato {
+	scale: 0.7;
+	position: absolute;
+	top: -2.8rem;
+	right: -2rem;
+}
+
+.sixth-section .mushs {
+	scale: 0.7;
+	position: absolute;
+	top: -5rem;
+	right: 10rem;
+}
+
+.seven-section {
+	position: relative;
+	background: #f1f1f1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 6rem;
+}
+
+.seven-section .seven-section-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 70px;
+	margin-bottom: 2rem;
+}
+
+.seven-section .seven-section-card-group {
+	display: flex;
+	gap: 5.5rem;
+	margin-bottom: 7rem;
+}
+
+.card-chef {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 18rem;
+	height: auto;
+	border-radius: 45px;
+	transition: 0.3s;
+}
+
+.card-chef-img {
+	position: relative;
+	display: inline-block;
+}
+
+.card-chef-img img {
+	width: 360px;
+	height: 500px;
+	border-radius: 20px;
+	object-fit: cover;
+	transition: filter 0.3s ease-in-out;
+}
+
+.overlay {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.card-chef-img:hover .overlay {
+	opacity: 1;
+}
+
+.card-chef-img .icons i {
+	color: var(--white);
+	scale: 1.5;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.card-chef-title {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 36px;
+	color: var(--black-second);
+	margin: 10px 10px;
+}
+
+.card-chef-prof {
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 5px;
+	padding: 5px 20px 5px 20px;
+}
+
+.card-chef-description {
+	margin-top: 15px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 21.6px;
+	text-align: center;
+	color: var(--black-second);
 }

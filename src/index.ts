@@ -19,3 +19,24 @@ stars.forEach((el) => {
 		el!.appendChild(star)
 	}
 })
+
+const formatNumber = (num: number) => (num < 10 ? `0${num}` : num)
+
+const updateHour = () => {
+	const now = new Date()
+	const day = formatNumber(now.getDate())
+	const mounth = formatNumber(now.getMonth())
+	const min = formatNumber(now.getMinutes())
+	const seconds = formatNumber(now.getSeconds())
+
+	const formatHour = `
+        ${day} : ${mounth} : ${min} : ${seconds}
+    `
+
+    const element = document.getElementById('actualHour')
+    if(element) element.textContent = formatHour
+}
+
+setInterval(updateHour, 1000)
+
+updateHour()
