@@ -40,7 +40,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 2rem 15rem;
-	width: 100%;
+	max-width: 100%;
 	transition: all 0.5s;
 }
 
@@ -51,6 +51,7 @@ body {
 .nav-menu {
 	display: flex;
 	align-items: center;
+	max-width: 100%;
 	gap: 1.5rem;
 	font-size: 1.2rem;
 }
