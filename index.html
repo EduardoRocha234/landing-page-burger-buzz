@@ -12,6 +12,14 @@
 			rel="stylesheet"
 			href="./styles/main.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="./styles/queries.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./styles/animations.css"
+		/>
 
 		<!-- Js -->
 
@@ -59,8 +67,23 @@
 	</head>
 	<body>
 		<section class="first-section">
-			<header class="header">
-				<nav class="navbar">
+			<div class="menu-burg">
+				<i
+					onclick="openMenu()"
+					id="open-menu"
+					class="bx bx-menu"
+				></i>
+			</div>
+			<nav
+				id="navbar"
+				class="navbar"
+			>
+				<ul class="nav-menu">
+					<i
+						onclick="closeMenu()"
+						id="close-menu"
+						class="bx bx-x"
+					></i>
 					<a href="/">
 						<img
 							class="navbar-logo"
@@ -68,55 +91,60 @@
 							alt="Logo"
 						/>
 					</a>
-					<ul class="nav-menu">
-						<li class="nav-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a href="#">Menus</a>
-						</li>
-						<li class="nav-item">
-							<a href="#">Pages</a>
-						</li>
-						<li class="nav-item">
-							<a href="#">Shop</a>
-						</li>
-						<li class="nav-item">
-							<a href="#">Blogs</a>
-						</li>
-						<li class="nav-item">
-							<a href="#">Contact Us</a>
-						</li>
-						<div class="nav-menu-options">
-							<div class="search">
-								<i class="bx bx-search"></i>
-								<input
-									type="search"
-									placeholder="Search"
-									class="search-input"
-								/>
-							</div>
-							<div class="login-btn">LOGIN</div>
-							<div
-								class="shop-cart"
-								title="Carrinho"
-							>
-								<img
-									src="./img/shop-cart-icon.png"
-									alt="Carrinho de compras"
-								/>
-							</div>
+					<li class="nav-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Menus</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Pages</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Blogs</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Contact Us</a>
+					</li>
+					<div class="nav-menu-options">
+						<div class="search">
+							<i class="bx bx-search"></i>
+							<input
+								type="search"
+								placeholder="Search"
+								class="search-input"
+							/>
 						</div>
-					</ul>
-				</nav>
-			</header>
+						<div class="login-btn">LOGIN</div>
+						<div
+							class="shop-cart"
+							title="Shop cart"
+						>
+							<img
+								src="./img/shop-cart-icon.png"
+								alt="Shop cart icon"
+							/>
+						</div>
+					</div>
+				</ul>
+			</nav>
 			<div class="content-title">
+				<a href="/">
+					<img
+						class="navbar-logo-mobile"
+						src="./img/logo_burguer.png"
+						alt="Logo"
+					/>
+				</a>
 				<h3>FAST FOOD BURGERS</h3>
 				<div>
 					<h1>BEST</h1>
 					<h1>BURGERS</h1>
 				</div>
-				<h5>
+				<h5 class="desc">
 					Secret family recipes are the stuff of legends and Stack burger blend
 					is no expection.
 				</h5>
@@ -155,7 +183,7 @@
 			</div>
 			<div class="second-section-card-group">
 				<div>
-					<div class="card-bgr">
+					<div class="card-bgr animate-card-1">
 						<div class="card-bgr-img">
 							<img src="./img/our_burger_img.jpg" />
 						</div>
@@ -168,7 +196,7 @@
 					</div>
 				</div>
 				<div>
-					<div class="card-bgr">
+					<div class="card-bgr animate-card-2">
 						<div class="card-bgr-img">
 							<img src="./img/happy_man_with_bugr.jpg" />
 						</div>
@@ -182,7 +210,7 @@
 				</div>
 				<div>
 					<div class="card-bgr">
-						<div class="card-bgr-img">
+						<div class="card-bgr-img animate-card-3">
 							<img src="./img/burguer_chk.jpg" />
 						</div>
 						<div class="card-bgr-title">CHICKEN BURGERS</div>
@@ -236,7 +264,7 @@
 			<div class="fourth-section-title">TODAY'S A STACKIN' DAY</div>
 			<div class="fourth-section-card-group">
 				<div>
-					<div class="card-bgr">
+					<div class="card-bgr card-bgr-animate-1">
 						<div class="card-bgr-img">
 							<img src="./img/h2_cat-4.png" />
 						</div>
@@ -249,7 +277,7 @@
 					</div>
 				</div>
 				<div>
-					<div class="card-bgr">
+					<div class="card-bgr card-bgr-animate-2">
 						<div class="card-bgr-img">
 							<img src="./img/h2_cat-3.png" />
 						</div>
@@ -262,7 +290,7 @@
 					</div>
 				</div>
 				<div>
-					<div class="card-bgr">
+					<div class="card-bgr card-bgr-animate-3">
 						<div class="card-bgr-img">
 							<img src="./img/h2_cat-5.png" />
 						</div>
@@ -282,9 +310,8 @@
 			<div>
 				<div class="menu-buttons">
 					<div
-						class="button"
-						onmouseover="changeIMG('svg_bg_1', 'burger-icon-white.svg')"
-						onmouseout="changeIMG('svg_bg_1', 'burger-icon-black.svg')"
+						class="button selected"
+						onclick="changeDishes('dishes1', this)"
 					>
 						<img
 							id="svg_bg_1"
@@ -292,7 +319,10 @@
 						/>
 						BURGER
 					</div>
-					<div class="button">
+					<div
+						class="button"
+						onclick="changeDishes('dishes2', this)"
+					>
 						<i class="bx bxs-pizza bx-rotate-270"></i>
 						PIZZA
 					</div>
@@ -300,22 +330,14 @@
 						<i class="bx bxs-sushi"></i>
 						SUSHI
 					</div>
-					<div
-						class="button"
-						onmouseover="changeIMG('svg_burrito', 'burrito_white.svg')"
-						onmouseout="changeIMG('svg_burrito', 'burrito.svg')"
-					>
+					<div class="button">
 						<img
 							id="svg_burrito"
 							src="./img/burrito.svg"
 						/>
 						BURRITO
 					</div>
-					<div
-						class="button"
-						onmouseover="changeIMG('svg_fast_food', 'fast_food_white.svg')"
-						onmouseout="changeIMG('svg_fast_food', 'fast_food.svg')"
-					>
+					<div class="button">
 						<img
 							id="svg_fast_food"
 							src="./img/fast_food.svg"
@@ -326,11 +348,7 @@
 						<i class="bx bx-coffee"></i>
 						BEVERAGES
 					</div>
-					<div
-						class="button"
-						onmouseover="changeIMG('svg_salad', 'salad_white.svg')"
-						onmouseout="changeIMG('svg_salad', 'salad.svg')"
-					>
+					<div class="button">
 						<img
 							id="svg_salad"
 							src="./img/salad.svg"
@@ -338,7 +356,10 @@
 						SALATS
 					</div>
 				</div>
-				<div class="dishes">
+				<div
+					class="dishes"
+					id="dishes1"
+				>
 					<div class="card-dishe">
 						<div class="card-dishe-img">
 							<img src="./img/product_1.png" />
@@ -461,6 +482,140 @@
 						</div>
 					</div>
 				</div>
+				<div
+					class="dishes"
+					id="dishes2"
+				>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img src="./img/h2_cat-4.png" />
+						</div>
+						<div class="card-dishe-title">
+							<h6>SPECIAL PIZZA</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">9.58$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img
+								src="./img/saahil-khatkhate-kfDsMDyX1K0-unsplash-removebg-preview.png"
+							/>
+						</div>
+						<div class="card-dishe-title">
+							<h6>PIZZA HUT</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Nunc scelerisque viverra mauris in aliquam. Tellus cras adipiscing
+							enim eu turpis egestas pretium. Nisl pretium fusce id velit ut.
+							Semper auctor neque vitae tempus quam.
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">7.28$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img
+								src="./img/fernando-andrade-_P76trHTWDE-unsplash-removebg-preview.png"
+							/>
+						</div>
+						<div class="card-dishe-title">
+							<h6>KING OF PIZZAS</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Consectetur purus ut faucibus pulvinar. Iaculis eu non diam
+							phasellus vestibulum lorem sed risus ultricies. Odio facilisis
+							mauris sit amet massa vitae.
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">13.45$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="card-dishe">
+						<div class="card-dishe-img">
+							<img
+								src="./img/foad-roshan-Y6OgisiGBjM-unsplash-removebg-preview.png"
+							/>
+						</div>
+						<div class="card-dishe-title">
+							<h6>BRAZILIAN PIZZA</h6>
+							<i
+								id="hear"
+								class="bx bx-heart"
+								onclick="liked(this)"
+							></i>
+						</div>
+						<div class="card-dishe-stars"></div>
+						<div class="card-dishe-description">
+							Morbi tincidunt augue interdum velit euismod in pellentesque massa
+							placerat.
+							<strong>Melhor Pizza da casa.</strong>
+						</div>
+						<div class="card-dishe-footer">
+							<div class="price">6.64$</div>
+							<div
+								class="shop-cart"
+								title="Adicionar ao carrinho"
+							>
+								<img
+									src="./img/shop-cart-icon.png"
+									alt="Carrinho de compras"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="fifth-section-btn-mn">view all</div>
 		</section>
@@ -519,71 +674,156 @@
 		<section class="seven-section">
 			<div class="seven-section-title">MEET OUR EXPERT CHEFS</div>
 			<div class="seven-section-card-group">
-				<div>
-					<div class="card-chef">
-						<div class="card-chef-img">
-							<img src="./img/chef_1.png" />
-							<div class="overlay">
-								<div class="icons">
-									<i class="bx bxl-facebook"></i>
-									<i class="bx bxl-twitter"></i>
-									<i class="bx bxl-instagram"></i>
-									<i class="bx bxl-pinterest"></i>
-								</div>
+				<div class="card-chef">
+					<div class="card-chef-img">
+						<img src="./img/chef_1.png" />
+						<div class="overlay">
+							<div class="icons">
+								<i class="bx bxl-facebook"></i>
+								<i class="bx bxl-twitter"></i>
+								<i class="bx bxl-instagram"></i>
+								<i class="bx bxl-pinterest"></i>
 							</div>
-						</div>
-						<div class="card-chef-title">JOEY ALTMAN</div>
-						<div class="card-chef-prof">EXECUTIVE CHEF</div>
-						<div class="card-chef-description">
-							Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
-							With.
 						</div>
 					</div>
-				</div>
-				<div>
-					<div class="card-chef">
-						<div class="card-chef-img">
-							<img src="./img/chef_2.png" />
-							<div class="overlay">
-								<div class="icons">
-									<i class="bx bxl-facebook"></i>
-									<i class="bx bxl-twitter"></i>
-									<i class="bx bxl-instagram"></i>
-									<i class="bx bxl-pinterest"></i>
-								</div>
-							</div>
-						</div>
-						<div class="card-chef-title">PETRICK LIN</div>
-						<div class="card-chef-prof">HEAD CHEF</div>
-						<div class="card-chef-description">
-							Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
-							With.
-						</div>
+					<div class="card-chef-title">JOEY ALTMAN</div>
+					<div class="card-chef-prof">EXECUTIVE CHEF</div>
+					<div class="card-chef-description">
+						Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
+						With.
 					</div>
 				</div>
-				<div>
-					<div class="card-chef">
-						<div class="card-chef-img">
-							<img src="./img/chef_3.png" />
-							<div class="overlay">
-								<div class="icons">
-									<i class="bx bxl-facebook"></i>
-									<i class="bx bxl-twitter"></i>
-									<i class="bx bxl-instagram"></i>
-									<i class="bx bxl-pinterest"></i>
-								</div>
+				<div class="card-chef">
+					<div class="card-chef-img">
+						<img src="./img/chef_2.png" />
+						<div class="overlay">
+							<div class="icons">
+								<i class="bx bxl-facebook"></i>
+								<i class="bx bxl-twitter"></i>
+								<i class="bx bxl-instagram"></i>
+								<i class="bx bxl-pinterest"></i>
 							</div>
 						</div>
-						<div class="card-chef-title">RACHEL ALIEN</div>
-						<div class="card-chef-prof">KITCHEN POERTER</div>
-						<div class="card-chef-description">
-							Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
-							With.
+					</div>
+					<div class="card-chef-title">PETRICK LIN</div>
+					<div class="card-chef-prof">HEAD CHEF</div>
+					<div class="card-chef-description">
+						Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
+						With.
+					</div>
+				</div>
+				<div class="card-chef">
+					<div class="card-chef-img">
+						<img src="./img/chef_3.png" />
+						<div class="overlay">
+							<div class="icons">
+								<i class="bx bxl-facebook"></i>
+								<i class="bx bxl-twitter"></i>
+								<i class="bx bxl-instagram"></i>
+								<i class="bx bxl-pinterest"></i>
+							</div>
 						</div>
+					</div>
+					<div class="card-chef-title">RACHEL ALIEN</div>
+					<div class="card-chef-prof">KITCHEN POERTER</div>
+					<div class="card-chef-description">
+						Indulge In Our Mouth-Watering Signature Stacks Each Layer Packed
+						With.
 					</div>
 				</div>
 			</div>
 		</section>
-		
+		<footer>
+			<img
+				class="dec-footer-1"
+				src="./img/burger_dec.png"
+			/>
+			<img
+				class="dec-footer-2"
+				src="./img/pizza_g.png"
+			/>
+			<section>
+				<menu class="footer-contact">
+					<a href="/">
+						<img
+							class="navbar-logo"
+							src="./img/logo_burguer.png"
+							alt="Logo"
+							width="5"
+							height="5"
+						/>
+					</a>
+					<span>2972 Westheimer Rd. Santa Ana, Illinois 85486</span>
+					<a
+						title="Click to send email to developer of this site :)"
+						href="mailto:duduraleixo2005@gmail.com"
+						>SUPPORT@EXAMPLE.COM</a
+					>
+					<a
+						style="color: var(--red)"
+						href="tel:+(084) 456-0789"
+						>+(084) 456-0789</a
+					>
+				</menu>
+			</section>
+			<section>
+				<menu class="footer-menu">
+					<span class="menu-title">PRODUCTS</span>
+					<ul>
+						<li><a href="#">BURGERS</a></li>
+						<li><a href="#">KING DELIGHT PRODUCTS</a></li>
+						<li><a href="#">CRISPY FLAVORS</a></li>
+						<li><a href="#">BREAKFAST PRODUCTS</a></li>
+					</ul>
+				</menu>
+			</section>
+			<section>
+				<menu class="footer-menu">
+					<ul style="margin-top: 36px">
+						<li><a href="#">KIDS MENUS</a></li>
+						<li><a href="#">DESSERTS</a></li>
+						<li><a href="#">BEVERAGES</a></li>
+						<li><a href="#">SAUCES</a></li>
+					</ul>
+				</menu>
+			</section>
+			<section>
+				<menu class="footer-menu">
+					<span class="menu-title">QUICK LINKS</span>
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">MENU</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</menu>
+			</section>
+			<section>
+				<menu
+					style="margin-top: 2.5rem"
+					class="footer-menu"
+				>
+					<span class="menu-title">OPENING HOURS</span>
+					<div class="op-hours">MOUNDAY - FRIDAY: <span>8AM - 4PM</span></div>
+					<div class="op-hours">SATURDAY: <span>8AM - 12AM</span></div>
+					<div class="social-icons">
+						<i class="bx bxl-facebook-circle"></i>
+						<i class="bx bxl-twitter"></i>
+						<a
+							href="https://www.instagram.com/eduardoraleixo/"
+							target="_blank"
+						>
+							<i class="bx bxl-instagram-alt"></i>
+						</a>
+						<i class="bx bxl-pinterest"></i>
+					</div>
+				</menu>
+			</section>
+		</footer>
+		<section class="section-copyrigth">
+			<span class="copy"
+				>© 2024 EDUARDO ROCHA ALEIXO . ALL RIGTHS RESERVED</span
+			>
+		</section>
 	</body>
 </html>
